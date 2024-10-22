@@ -9,10 +9,10 @@ public class SafeInput
      */
     public static String getNonZeroLenString(Scanner pipe, String prompt)
     {
-        String retString = ""; //Set this to zero length. Loop runs until it isn't
+        String retString = "";
         do
         {
-            System.out.print("\n" + prompt + ": "); //show prompt add space
+            System.out.print("\n" + prompt + ": ");
             retString = pipe.nextLine();
         } while (retString.length() == 0);
 
@@ -34,11 +34,11 @@ public class SafeInput
             } else
             {
                 System.out.println("Invalid input. Please enter an integer.");
-                // Clear the pipe by reading and discarding the trash
+
                 pipe.next();
             }
         }
-        // Clear the pipe after reading the value (the newline fix)
+
         pipe.nextLine();
         return num;
     }
@@ -57,11 +57,11 @@ public class SafeInput
             } else
             {
                 System.out.println("Invalid input. Please enter a double value.");
-                // Clear the pipe by reading and discarding the trash
+
                 pipe.next();
             }
         }
-        // Clear the pipe after reading the value (the newline fix)
+
         pipe.nextLine();
         return num;
     }
@@ -86,11 +86,11 @@ public class SafeInput
             } else
             {
                 System.out.println("Invalid input. Please enter an integer.");
-                // Clear the pipe by reading and discarding the trash
+
                 pipe.next();
             }
         }
-        // Clear the pipe after reading the value (the newline fix)
+
         pipe.nextLine();
         return num;
     }
@@ -115,11 +115,11 @@ public class SafeInput
             } else
             {
                 System.out.println("Invalid input. Please enter a double value.");
-                // Clear the pipe by reading and discarding the trash
+
                 pipe.next();
             }
         }
-        // Clear the pipe after reading the value (the newline fix)
+
         pipe.nextLine();
         return num;
     }
@@ -154,7 +154,7 @@ public class SafeInput
         while (!validInput)
         {
             System.out.print(prompt);
-            input = pipe.nextLine().trim(); // Trim leading and trailing whitespaces
+            input = pipe.nextLine().trim();
             if (input.matches(regEx))
             {
                 validInput = true;
@@ -170,7 +170,7 @@ public class SafeInput
     {
         int totalWidth = 60;
         int msgWidth = msg.length();
-        int sideStars = (totalWidth - msgWidth - 6) / 2; // 6 stars for the padding on either side of the message
+        int sideStars = (totalWidth - msgWidth - 6) / 2;
 
         // Print top row of stars
         for (int i = 0; i < totalWidth; i++)
@@ -179,7 +179,7 @@ public class SafeInput
         }
         System.out.println();
 
-        // Print second row with centered message
+
         System.out.print("***");
         for (int i = 0; i < sideStars; i++)
         {
@@ -190,14 +190,14 @@ public class SafeInput
         {
             System.out.print(" ");
         }
-        // If the message length is odd, add one more space to maintain total width
+
         if (msgWidth % 2 != 0)
         {
             System.out.print(" ");
         }
         System.out.println("***");
 
-        // Print bottom row of stars
+
         for (int i = 0; i < totalWidth; i++)
         {
             System.out.print("*");
