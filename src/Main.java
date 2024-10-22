@@ -107,7 +107,7 @@ public class Main
 
         double mainAverage = getAverage(values);
 
-      
+
         System.out.printf("The average of the array is: %.2f%n", mainAverage);
     }
 
