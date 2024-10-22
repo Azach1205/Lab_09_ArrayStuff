@@ -6,7 +6,7 @@ public class Main
     public static void main(String[] args)
     {
 
-        // Declare an array of type int named dataPoints with a length of 100
+
         int[] dataPoints = new int[100];
 
         Random random = new Random();
@@ -15,7 +15,7 @@ public class Main
             dataPoints[i] = random.nextInt(100) + 1;
         }
 
-        // Printing the array to verify the random values
+
         System.out.println("Randomly initialized dataPoints array:");
         for (int i = 0; i < dataPoints.length; i++)
         {
@@ -23,7 +23,7 @@ public class Main
         }
 
 
-        // Displaying the dataPoints values separated by " | "
+
         System.out.println("DataPoints values: ");
         for (int i = 0; i < dataPoints.length; i++)
         {
@@ -91,10 +91,10 @@ public class Main
 
         for (int i = 1; i < dataPoints.length; i++) {
             if (dataPoints[i] < min) {
-                min = dataPoints[i]; // Update min if a smaller value is found
+                min = dataPoints[i];
             }
             if (dataPoints[i] > max) {
-                max = dataPoints[i]; // Update max if a larger value is found
+                max = dataPoints[i];
             }
         }
 
@@ -102,7 +102,7 @@ public class Main
         System.out.printf("The minimum value in the dataPoints array is: %d%n", min);
         System.out.printf("The maximum value in the dataPoints array is: %d%n", max);
 
-        double[] values = {23.5, 45.2, 12.8, 67.4, 89.9}; // Sample array of double values
+        double[] values = {23.5, 45.2, 12.8, 67.4, 89.9};
 
 
         double mainAverage = getAverage(values);
